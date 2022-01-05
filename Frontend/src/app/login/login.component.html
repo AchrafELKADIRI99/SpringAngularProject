@@ -1,0 +1,52 @@
+
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+  
+            <div class="mb-md-5 mt-md-4 pb-5">
+  
+              <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+              <p class="text-white-50 mb-5">Please enter your login and password!</p>
+  
+              <div class="form-outline form-white mb-4">
+                <input  type="text" name="username" [(ngModel)]="username" class="form-control form-control-lg" />
+                <label class="form-label" for="typeEmailX">Email</label>
+              </div>
+  
+              <div class="form-outline form-white mb-4">
+                <input type="password" name="password" [(ngModel)]="password" class="form-control form-control-lg" />
+                <label class="form-label" for="typePasswordX">Password</label>
+              </div>
+              <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+              <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+  
+              <button class="btn btn-outline-light btn-lg px-5" (click)=handleLogin()  value="Log In">Login</button>
+  
+  
+            </div>
+  
+            
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+      <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+      <h3>Login</h3>
+  
+      <form>
+        <input type="text" id="username" class="fadeIn second" [(ngModel)]="username" name="username" placeholder="username">
+        <input type="password" id="password" class="fadeIn third" [(ngModel)]="password" name="password" placeholder="password">
+        <input type="submit" (click)=handleLogin() class="fadeIn fourth" value="Log In">
+      </form>
+  
+      ssss
+    </div>
+  </div> -->
